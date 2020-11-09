@@ -24,13 +24,6 @@ class BasePOC(object):
             return self._attack(**kwargs)
 
 
-
-
-
-
-
-
-
 class Output(object):
     """
     结果输出
