@@ -1,15 +1,24 @@
+SUCCESS_COUNT = 0
+RESULT = []
+
+
 class BasePOC(object):
 
     pid = None
+    version = None
     name = None
     author = None
-    app = None
-    version = None
-    v_type = None
-    desc = None
-    date = None
+    create_date = None
+    update_date = None
+    app_name = None
+    app_version = None
+    vul_type = None
+    info = None
 
-    def __init__(self):
+    def __init__(self, target, mode="verify"):
+        self.target = target
+        self.mode = mode
+        self.error = ''
 
     def _verify(self):
         pass
@@ -17,7 +26,7 @@ class BasePOC(object):
     def _attack(self):
         pass
 
-    def run(self,**kwargs):
+    def run(self, **kwargs):
         if self.mode == 'verify':
             return self._verify(**kwargs)
         elif self.mode == 'attack':
@@ -25,9 +34,7 @@ class BasePOC(object):
 
 
 class Output(object):
-    """
-    结果输出
-    """
+
     def __init__(self, poc_info=None):
         if poc_info:
             self.pid = poc_info.pid
@@ -48,12 +55,12 @@ class Output(object):
             "status": "success",
             "result": result
         }
-        # 统计成功漏洞数量
-        SCAN_RESULT.SUCCESS_COUNT += 1
-        # 放到 data 中的 RESULT
-        SCAN_RESULT.RESULT.append(tmp_result)
+
+        # SUCCESS_COUNT =  SUCCESS_COUNT + 1
+
+        # RESULT.append(tmp_result)
         msg = "{} {} [{}] is vulnerable".format(self.mode.capitalize(), self.target, self.name)
-        logger.success(msg)
+        # logger.success(msg)
 
     def fail(self, error=""):
         # 失败调用这里
@@ -67,6 +74,6 @@ class Output(object):
             "result": {"extra": str(error)},
         }
         # 放到 data 中的 RESULT
-        SCAN_RESULT.RESULT.append(tmp_result)
+        RESULT.append(tmp_result)
         msg = "{} {} [{}] failed: {}".format(self.mode.capitalize(), self.target, self.name, error)
-        logger.warning(msg)
+
