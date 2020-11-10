@@ -13,4 +13,4 @@ def banner():
 
 if __name__ == "__main__":
     banner()
-    run(option(sys.argv))
+    # run(option(sys.argv))
