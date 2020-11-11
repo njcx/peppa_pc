@@ -4,16 +4,16 @@ RESULT = []
 
 class BasePOC(object):
 
-    pid = None
-    version = None
-    name = None
-    author = None
-    create_date = None
-    update_date = None
-    app_name = None
-    app_version = None
-    vul_type = None
-    info = None
+    pid = None            # poc id
+    version = None        # poc 版本
+    name = None           # poc 名字
+    author = None         # poc 作者
+    create_date = None    # poc 创建时间
+    update_date = None    # poc 更新时间
+    app_name = None       # poc 对应的应用名
+    app_version = None    # poc 对应的应用版本
+    vul_type = None       # poc 类型
+    info = None           # 注释
 
     def __init__(self, target, mode="verify"):
         self.target = target
@@ -33,11 +33,11 @@ class BasePOC(object):
             return self._attack(**kwargs)
 
 
-class Output(object):
+class OutPut(object):
 
-    def __init__(self, poc_info=None):
-        if poc_info:
-            self.pid = poc_info.pid
+    def __init__(self, poc_object=None):
+        if poc_object:
+            self.pid = poc_object.pid
             self.name = poc_info.name
             self.target = poc_info.target
             self.mode = poc_info.mode
@@ -45,7 +45,7 @@ class Output(object):
             self.version = poc_info.version
 
     def success(self, result):
-        # 成功调用这里
+
         tmp_result = {
             "target": self.target,
             "name": self.name,
