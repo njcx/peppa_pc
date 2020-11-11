@@ -23,24 +23,23 @@ class BasePOC(object):
         self.mode = mode
         self.error = ''
 
-    def _verify(self):
+    def verify(self):
         pass
 
-    def _attack(self):
+    def attack(self):
         pass
 
     def run(self, **kwargs):
         if self.mode == 'verify':
-            return self._verify(**kwargs)
+            return self.verify(**kwargs)
         elif self.mode == 'attack':
-            return self._attack(**kwargs)
+            return self.attack(**kwargs)      # 这里直接调run 函数即可
 
 
 class OutPut(object):
 
     def __init__(self, poc_object=None):
         if poc_object:
-            self.pid = poc_object.pid
             self.name = poc_object.name
             self.target = poc_object.target
             self.mode = poc_object.mode
@@ -57,28 +56,29 @@ class OutPut(object):
             "app_name": self.app_name,
             "app_version": self.app_version,
             "mode": self.mode,
+            "vul_type": self.vul_type,
+            "info": self.info,
             "status": "success",
             "result": result
         }
 
         # SUCCESS_COUNT =  SUCCESS_COUNT + 1
-
         RESULT.append(tmp_result)
         msg = "{} {} [{}] is vulnerable".format(self.mode, self.target, self.name)
         lightcyan(msg)
 
     def fail(self, error=""):
-        # 失败调用这里
         tmp_result = {
             "target": self.target,
             "name": self.name,
             "app_name": self.app_name,
             "app_version": self.app_version,
             "mode": self.mode,
+            "vul_type": self.vul_type,
+            "info": self.info,
             "status": "failed",
             "result": {"extra": str(error)},
         }
-        # 放到 data 中的 RESULT
         RESULT.append(tmp_result)
         msg = "{} {} [{}] failed: {}".format(self.mode, self.target, self.name, error)
         yellow(msg)

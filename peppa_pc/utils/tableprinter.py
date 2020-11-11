@@ -1,11 +1,13 @@
 import prettytable as pt
 
-# tb = pt.PrettyTable( ["City name", "Area", "Population", "Annual Rainfall"])
-tb = pt.PrettyTable()
-tb.field_names = ["City name", "Area", "Population", "Annual Rainfall"]
-tb.add_row(["Adelaide",1295, 1158259, 600.5])
-tb.add_row(["Brifasdfae",5905, 1857594, 1146.4])
-tb.add_row(["Darwin", 112, 120900, 171423423423423424.7])
-tb.add_row(["Hobart", 1357, 205556,619.5])
 
-print(tb)
+def data_table_printer(data):
+    tb = pt.PrettyTable()
+    tb.field_names = ["id", "target", "poc_name", "app_name", "app_version", "vul_type", "info", "mode", "status"]
+    id = 0
+    for data_ in data:
+        id += 1
+        tb.add_row([id, data_["target"], data_["poc_name"], data_["app_name"], data_["app_version"],
+                    data_[ "vul_type"], data_[ "info"],data_["mode"], data_["status"]])
+    return tb
+

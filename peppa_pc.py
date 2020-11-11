@@ -1,6 +1,6 @@
 from pyfiglet import Figlet
 from peppa_pc.controler import run, option
-import sys
+# import sys
 
 
 def banner():
@@ -13,4 +13,4 @@ def banner():
 
 if __name__ == "__main__":
     banner()
-    # run(option(sys.argv))
+    run(option())
