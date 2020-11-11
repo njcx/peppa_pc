@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f8157156-bc30-404e-a843-bcf41ed33a50" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/peppa_pc.py" beforeDir="false" afterPath="$PROJECT_DIR$/peppa_pc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/peppa_pc/controler/controler.py" beforeDir="false" afterPath="$PROJECT_DIR$/peppa_pc/controler/controler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/peppa_pc/core/poc.py" beforeDir="false" afterPath="$PROJECT_DIR$/peppa_pc/core/poc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/peppa_pc/utils/colorprinter.py" beforeDir="false" afterPath="$PROJECT_DIR$/peppa_pc/utils/colorprinter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/peppa_pc/utils/tableprinter.py" beforeDir="false" afterPath="$PROJECT_DIR$/peppa_pc/utils/tableprinter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/CMS phpshop 2.0 - SQL Injection Vulnerability.py.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/CMS phpshop 2.0 - SQL Injection Vulnerability.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +45,7 @@
         <counts>
           <entry key="dummy" value="2" />
           <entry key="md" value="55" />
-          <entry key="py" value="1198" />
+          <entry key="py" value="1213" />
           <entry key="txt" value="26" />
         </counts>
       </usages-collector>
@@ -59,7 +53,7 @@
         <counts>
           <entry key="Markdown" value="55" />
           <entry key="PLAIN_TEXT" value="28" />
-          <entry key="Python" value="1198" />
+          <entry key="Python" value="1213" />
         </counts>
       </usages-collector>
     </session>
@@ -112,10 +106,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/peppa_pc/controler/controler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="23" column="101" selection-start-line="23" selection-start-column="101" selection-end-line="23" selection-end-column="101" />
+            <state relative-caret-position="521">
+              <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
               <folding>
-                <marker date="1605088803944" expanded="true" signature="34:39" ph="..." />
+                <marker date="1605088952822" expanded="true" signature="34:39" ph="..." />
               </folding>
             </state>
           </provider>
@@ -214,11 +208,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-1798" />
-    <option name="y" value="158" />
-    <option name="width" value="1440" />
-    <option name="height" value="797" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1920" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -466,14 +460,20 @@
       <option name="project" value="LOCAL" />
       <updated>1605084058599</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add .py">
+      <created>1605089033522</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605089033522</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22470714" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22470714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -488,7 +488,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.32970297" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.32970297" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -640,10 +640,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/peppa_pc/controler/controler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="23" column="101" selection-start-line="23" selection-start-column="101" selection-end-line="23" selection-end-column="101" />
+        <state relative-caret-position="521">
+          <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
           <folding>
-            <marker date="1605088803944" expanded="true" signature="34:39" ph="..." />
+            <marker date="1605088952822" expanded="true" signature="34:39" ph="..." />
           </folding>
         </state>
       </provider>
