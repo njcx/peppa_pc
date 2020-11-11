@@ -1,3 +1,6 @@
+from peppa_pc.utils import yellow, lightcyan
+
+
 SUCCESS_COUNT = 0
 RESULT = []
 
@@ -38,19 +41,21 @@ class OutPut(object):
     def __init__(self, poc_object=None):
         if poc_object:
             self.pid = poc_object.pid
-            self.name = poc_info.name
-            self.target = poc_info.target
-            self.mode = poc_info.mode
-            self.app = poc_info.app
-            self.version = poc_info.version
+            self.name = poc_object.name
+            self.target = poc_object.target
+            self.mode = poc_object.mode
+            self.app_name = poc_object.app_name
+            self.app_version = poc_object.app_version
+            self.vul_type = poc_object.vul_type
+            self.info = poc_object.info
 
     def success(self, result):
 
         tmp_result = {
             "target": self.target,
             "name": self.name,
-            "app": self.app,
-            "version": self.version,
+            "app_name": self.app_name,
+            "app_version": self.app_version,
             "mode": self.mode,
             "status": "success",
             "result": result
@@ -58,22 +63,23 @@ class OutPut(object):
 
         # SUCCESS_COUNT =  SUCCESS_COUNT + 1
 
-        # RESULT.append(tmp_result)
-        msg = "{} {} [{}] is vulnerable".format(self.mode.capitalize(), self.target, self.name)
-        # logger.success(msg)
+        RESULT.append(tmp_result)
+        msg = "{} {} [{}] is vulnerable".format(self.mode, self.target, self.name)
+        lightcyan(msg)
 
     def fail(self, error=""):
         # 失败调用这里
         tmp_result = {
             "target": self.target,
             "name": self.name,
-            "app": self.app,
-            "version": self.version,
+            "app_name": self.app_name,
+            "app_version": self.app_version,
             "mode": self.mode,
             "status": "failed",
             "result": {"extra": str(error)},
         }
         # 放到 data 中的 RESULT
         RESULT.append(tmp_result)
-        msg = "{} {} [{}] failed: {}".format(self.mode.capitalize(), self.target, self.name, error)
+        msg = "{} {} [{}] failed: {}".format(self.mode, self.target, self.name, error)
+        yellow(msg)
 
