@@ -10,7 +10,7 @@ optional arguments:
                         target url or host (e.g. "/tmp/target.txt")
   -t TARGET, --target TARGET
                         target url or host (e.g. "https://www.google.com/" or "192.168.0.1" or  "192.168.0.1/24" )
-  -p POC, --poc POC     poc_file  (e.g. "pocs/01-dz-sqli.py") or all
+  -p POC, --poc POC     poc_file  (e.g. "pocs/01-dz-sqli.py" or "all" ) 
   -T THREADS, --threads THREADS
                         max number of process, default cpu number
   -m MODE, --mode MODE  verify or attack (e.g. "verify"), default "verify"
@@ -37,7 +37,7 @@ def option():
                              " \"192.168.0.1\" or  \"192.168.0.1/24\" )")
 
     parser.add_argument("-p", "--poc",
-                        help="poc_file  (e.g. \"pocs/01-dz-sqli.py\") or all")
+                        help="poc_file  (e.g. \"pocs/01-dz-sqli.py\" or \"all\") ")
 
     parser.add_argument("-T", "--threads",
                         help="max number of process, default cpu number")
