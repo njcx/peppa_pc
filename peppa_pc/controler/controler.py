@@ -49,7 +49,7 @@ def option():
     try:
         if sum(map(lambda a: a or 0, args.__dict__.values())) == 0:
             print(usage)
-            
+
     except Exception as e:
 
         return args.__dict__
