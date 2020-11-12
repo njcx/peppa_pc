@@ -1,6 +1,5 @@
 from pyfiglet import Figlet
 from peppa_pc.controler import run, option
-# import sys
 
 
 def banner():
